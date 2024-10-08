@@ -2,10 +2,6 @@ export type IsectionOneList = {
   [name: string]: string;
 };
 
-// export type IsectionTwoNavList={
-
-// }
-
 export type IsectionTwoMenuList = {
   [key: string]: IsectionTwoMenuItemProps;
 };

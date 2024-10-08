@@ -9,9 +9,91 @@
 }
 
 @font-face {
-  font-family: 'hvm';
-  src: url('fonts/HelveticaNowText-Medium.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/HelveticaNowText-Medium.woff') format('woff'); /* Modern Browsers */
-  font-weight: normal; /* or bold, etc. */
-  font-style: normal; /* or italic, etc. */
+  font-family: "hvm";
+  src: url("./fonts/Regular/HelveticaNowText-Regular.woff2") format("woff2"),
+    url("./fonts/Regular/HelveticaNowText-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "hvm";
+  src: url("./fonts/Bold/HelveticaNowText-Bold.woff2") format("woff2"),
+    url("./fonts/Bold/HelveticaNowText-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "hvm";
+  src: url("./fonts/Bold/extraBold/HelveticaNowText-ExtraBold.woff2")
+      format("woff2"),
+    url("./fonts/Bold/extraBold/HelveticaNowText-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "hvm";
+  src: url("./fonts/Black/HelveticaNowText-Black.woff2") format("woff2"),
+    url("./fonts/Black/HelveticaNowText-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "hvm";
+  src: url("./fonts/Light/HelveticaNowText-Light.woff2") format("woff2"),
+    url("./fonts/Light/HelveticaNowText-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "hvm";
+  src: url("./fonts/Thin/HelveticaNowText-Thin.woff2") format("woff2"),
+    url("./fonts/Thin/HelveticaNowText-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "hvm";
+  src: url("./fonts/italic/boldItalic/HelveticaNowText-BoldItalic.woff2")
+      format("woff2"),
+    url("./fonts/italic/boldItalic/HelveticaNowText-BoldItalic.woff")
+      format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "hvm";
+  src: url("./fonts/italic/mediumItalic/HelveticaNowText-MediumItalic.woff2")
+      format("woff2"),
+    url("./fonts/italic/mediumItalic/HelveticaNowText-MediumItalic.woff")
+      format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "hvm";
+  src: url("./fonts/Medium/HelveticaNowText-Medium.woff2") format("woff2"),
+    url("./fonts/Medium/HelveticaNowText-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: medium;
+}
+
+:root {
+  --padded-width: 92vw;
+}
+
+.body-padding {
+  width: var(--width);
+}
+
+@media screen and (min-width=425px) {
+  :root {
+    --padded-width: 94vw;
+  }
 }
