@@ -3,7 +3,7 @@ import { sectionOneNavigation } from "./headerItems";
 const HeaderSectionOne = () => {
   const entries = Object.entries(sectionOneNavigation);
   return (
-    <section className="hidden lp:flex w-full bg-[#F5F5F5] justify-between items-center p-[0.4rem] px-11">
+    <header className="hidden lp:flex w-full bg-[#F5F5F5] justify-between items-center p-[0.4rem] px-11">
       <svg
         aria-hidden="true"
         focusable="false"
@@ -28,7 +28,7 @@ const HeaderSectionOne = () => {
           </a>
         ))}
       </menu>
-    </section>
+    </header>
   );
 };
 

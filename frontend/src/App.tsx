@@ -3,8 +3,10 @@ import HomePage from "./pages/Home/HomePage";
 // import Test from "./pages/test";
 const App = () => {
   return (
-    <HomePage />
-    // <Test/>
+    <div className="min-h-screen">
+      <HomePage />
+      {/* <Test/> */}
+    </div>
   );
 };
 

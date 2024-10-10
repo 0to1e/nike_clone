@@ -1,27 +1,42 @@
-//TODO:SearchBar Animation
-
 import { sectionTwoNavigation } from "./headerItems";
 import { useEffect, useState } from "react";
 
 const HeaderSectionTwo = () => {
   const [width, setWidth] = useState(window.innerWidth);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(window.scrollY);
 
   function handleResize() {
     setWidth(window.innerWidth);
   }
 
   useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY < lastScrollY) {
+        // Scrolling up
+        setIsVisible(true);
+      } else {
+        // Scrolling down
+        setIsVisible(false);
+      }
+      setLastScrollY(currentScrollY);
+    };
     window.addEventListener("resize", handleResize);
-
+    window.addEventListener("scroll", handleScroll);
     return () => {
+      window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [lastScrollY]);
 
   return (
-    <section className="flex justify-between items-center p-3 px-6 tb:px-10 gap-9 bg-white">
-      <div className=" basis-1/4 shrink-2">
-        {" "}
+    <header
+      className={`flex justify-between items-center p-3 px-6 tb:px-10 gap-9 bg-white transition-transform duration-200 ease-in-out ${
+        isVisible ? "sticky top-0 z-10 " : "-translate-y-full"
+      }`}
+    >
+      <div className="basis-1/4 shrink-2">
         <svg
           className="w-[3.55rem] h-auto"
           xmlns="http://www.w3.org/2000/svg"
@@ -35,35 +50,34 @@ const HeaderSectionTwo = () => {
       <nav
         className={`${
           width < 866 ? "hidden" : "flex"
-        } basis-1/2  justify-center`}
+        } basis-1/2 justify-center`}
       >
         <ul className="flex gap-5 items-center font-hvm font-medium">
-          <li className=" border-b-2 border-transparent hover:border-black text-nowrap">
+          <li className="border-b-2 border-transparent hover:border-black text-nowrap">
             New & Featured
           </li>
-          <li className=" border-b-2 border-transparent hover:border-black">
+          <li className="border-b-2 border-transparent hover:border-black">
             Men
           </li>
-          <li className=" border-b-2 border-transparent hover:border-black">
+          <li className="border-b-2 border-transparent hover:border-black">
             Women
           </li>
-          <li className=" border-b-2 border-transparent hover:border-black">
+          <li className="border-b-2 border-transparent hover:border-black">
             Kids
           </li>
-          <li className=" border-b-2 border-transparent hover:border-black">
+          <li className="border-b-2 border-transparent hover:border-black">
             Sale
           </li>
-          <li className=" border-b-2 border-transparent hover:border-black">
+          <li className="border-b-2 border-transparent hover:border-black">
             Customise
           </li>
-          <li className=" border-b-2 border-transparent hover:border-black">
+          <li className="border-b-2 border-transparent hover:border-black">
             SNKRS
           </li>
         </ul>
       </nav>
 
       <div className="flex basis-1/4 justify-end">
-        {" "}
         <menu>
           <ul className="flex gap-1">
             {Object.keys(sectionTwoNavigation)
@@ -89,7 +103,7 @@ const HeaderSectionTwo = () => {
                     strokeWidth="1.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="transition-colors duration-100 ease-in-out "
+                    className="transition-colors duration-100 ease-in-out"
                   >
                     <title>{menu}</title>
                     <path d={sectionTwoNavigation[menu].svgPath} />
@@ -99,7 +113,7 @@ const HeaderSectionTwo = () => {
           </ul>
         </menu>
       </div>
-    </section>
+    </header>
   );
 };
 
