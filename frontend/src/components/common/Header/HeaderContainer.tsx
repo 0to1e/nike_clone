@@ -1,7 +1,7 @@
 import HeaderSectionOne from "./HeaderSectionOne";
 import HeaderSectionTwo from "./HeaderSectionTwo";
 
-const Header = () => {
+const HeaderContainer = () => {
 
   return (
     <>
@@ -11,5 +11,5 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderContainer;
 

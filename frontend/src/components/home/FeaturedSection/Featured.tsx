@@ -1,9 +1,9 @@
 import { featuredItems } from "./featuredItems";
-import { FeaturedItemsList } from "../../../interfaces_types/Home/featured";
-const Featured: React.FC<FeaturedItemsList> = () => {
+import { FeaturedItemsList } from "../../../interfaces_types/Home/featuredSection";
+const FeaturedSection: React.FC<FeaturedItemsList> = () => {
   return (
     <section className=" mt-10 w-padded mx-auto font-hvm flex flex-col">
-      <span className="text-[1.3rem] mb-5 font-normal">Featured</span>
+      <h2 className="text-[1.3rem] mb-5 font-normal">Featured</h2>
       <div className="flex gap-2.5 overflow-hidden overflow-x-auto">
         {Object.keys(featuredItems).map((item) => (
           <a
@@ -32,4 +32,4 @@ const Featured: React.FC<FeaturedItemsList> = () => {
   );
 };
 
-export default Featured;
+export default FeaturedSection;

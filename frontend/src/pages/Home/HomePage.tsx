@@ -1,26 +1,26 @@
-import Header from "../../components/common/Header/Header";
+import HeaderContainer from "../../components/common/Header/HeaderContainer";
 import Footer from "../../components/common/Footer";
-import Hero from "../../components/home/Hero/HeroContainer";
-import Featured from "../../components/home/Featured/Featured";
+import HeroContainer from "../../components/home/Hero/HeroContainer";
+import FeaturedSection from "../../components/home/FeaturedSection/Featured";
 import NewSection from "../../components/home/NewSection/NewSectionContainer";
-import ClassicSection from "../../components/home/ClassicSection";
-import SportSection from "../../components/home/SportSection";
-import MemberBenifitSection from "../../components/home/MemberBenifitSection";
+import ClassicSection from "../../components/home/ClassicSection/ClassicSection";
+import SportSection from "../../components/home/SportSection/SportSection";
+import MemberBenifitSection from "../../components/home/MemberBenifitSection/MemberBenifitSection";
 import CategoriesSection from "../../components/home/CategoriesSection";
 
 const HomePage = () => {
   return (
-    <>
-      <Header />
-      <Hero />
-      <Featured />
+    <body>
+      <HeaderContainer />
+      <HeroContainer />
+      <FeaturedSection />
       <NewSection />
       <ClassicSection />
       <SportSection />
       <MemberBenifitSection />
       <CategoriesSection />
       <Footer />
-    </>
+    </body>
   );
 };
 
