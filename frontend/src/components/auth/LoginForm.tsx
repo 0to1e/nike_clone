@@ -7,10 +7,7 @@ import VisibilityOffSharpIcon from "@mui/icons-material/VisibilityOffSharp";
 import { handleLogin } from "../../services/auth";
 import { useBoolean } from "../../hooks/useBooleanHook";
 import { validateEmailFormat } from "../../utils/authValidationUtils";
-import {
-  ILoginFormData,
-  ILoginFormRef,
-} from "../../interfaces_types/Auth";
+import { ILoginFormData, ILoginFormRef } from "../../interfaces_types/Auth";
 import { AuthFormContext } from "../../contexts/AuthFormContext";
 
 const LoginForm = forwardRef<ILoginFormRef>((ref) => {

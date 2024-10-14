@@ -1,9 +1,7 @@
 const NavButtons = () => {
   return (
     <div className="w-[99.3%] flex items-center justify-between mb-5">
-      <h2 className="text-[1.3rem] font-normal">
-        All New, Perfect For You
-      </h2>
+      <h2 className="text-[1.3rem] font-normal">All New, Perfect For You</h2>
       <menu className="flex gap-6 items-center">
         <a className="hover:text-stone-400" href="#">
           Shop

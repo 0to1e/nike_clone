@@ -2,10 +2,7 @@ import { useRef, useContext } from "react";
 import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
 import { AuthFormContext } from "../../contexts/AuthFormContext";
-import {
-  ILoginFormRef,
-  IRegisterFormRef,
-} from "../../interfaces_types/Auth";
+import { ILoginFormRef, IRegisterFormRef } from "../../interfaces_types/Auth";
 
 const FormsContainer = () => {
   const formContext = useContext(AuthFormContext);
@@ -34,7 +31,7 @@ const FormsContainer = () => {
         loginForm ? "-translate-x-full max-mid:translate-x-0" : "translate-x-0"
       } bg-white`}
     >
-      <LoginForm ref={loginRef}  />
+      <LoginForm ref={loginRef} />
       <RegisterForm ref={registerRef} />
 
       <div className="mx-auto flex mt-12 gap-2 justify-center items-center">

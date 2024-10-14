@@ -60,7 +60,9 @@ const MemberBenifitSection: React.FC<MembershipItemsList> = () => {
             >
               <div className="flex flex-col m-8 gap-[0.65rem]">
                 <span className="text-white text-md font-medium">{item}</span>
-                <span className="text-white text-lg font-medium">{membershipItems[item].title}</span>{" "}
+                <span className="text-white text-lg font-medium">
+                  {membershipItems[item].title}
+                </span>{" "}
                 <button className=" bg-white p-1.5 px-3 rounded-full font-medium w-fit">
                   {membershipItems[item].action}
                 </button>

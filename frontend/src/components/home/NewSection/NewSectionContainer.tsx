@@ -1,12 +1,25 @@
 import { newItems } from "../NewSection/NewSectionData";
 import { FeaturedItemsList } from "../../../interfaces_types/Home/featuredSection";
 import NavButtons from "../../common/NavButtons";
+import { useRef, useEffect } from "react";
+import useLenis from "../../../hooks/useLenis";
 
 const NewSection: React.FC<FeaturedItemsList> = () => {
+  const wrapperRef = useRef<HTMLElement>();
+  useEffect(() => {
+    const wrapper = document.getElementById("id") as HTMLElement;
+
+    if (wrapper) wrapperRef.current = wrapper as HTMLElement;
+  }, []);
+  useLenis({ wrapper: wrapperRef.current, orientation: "horizontal" });
+
   return (
     <section className=" my-32 w-padded mx-auto font-hvm flex flex-col">
       <NavButtons />
-      <div className="flex gap-2.5 overflow-hidden overflow-x-auto scroll-smooth">
+      <div
+        id="id"
+        className="flex gap-2.5 overflow-hidden overflow-x-auto scroll-smooth"
+      >
         {Object.keys(newItems).map((item) => (
           <a
             href={newItems[item].path}
