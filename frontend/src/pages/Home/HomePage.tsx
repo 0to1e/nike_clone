@@ -6,11 +6,11 @@ import NewSection from "../../components/home/NewSection/NewSectionContainer";
 import ClassicSection from "../../components/home/ClassicSection/ClassicSection";
 import SportSection from "../../components/home/SportSection/SportSection";
 import MemberBenifitSection from "../../components/home/MemberBenifitSection/MemberBenifitSection";
-import CategoriesSection from "../../components/home/CategoriesSection";
+import CategoriesSection from "../../components/home/CategoriesSection/CategoriesSection";
 
 const HomePage = () => {
   return (
-    <body>
+    <>
       <HeaderContainer />
       <HeroContainer />
       <FeaturedSection />
@@ -20,7 +20,7 @@ const HomePage = () => {
       <MemberBenifitSection />
       <CategoriesSection />
       <Footer />
-    </body>
+    </>
   );
 };
 

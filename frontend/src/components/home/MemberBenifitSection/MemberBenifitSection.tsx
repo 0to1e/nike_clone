@@ -3,9 +3,9 @@ import { MembershipItemsList } from "../../../interfaces_types/Home/membershipSe
 
 const MemberBenifitSection: React.FC<MembershipItemsList> = () => {
   return (
-    <section className=" my-32 px-5 mx-auto font-hvm flex flex-col gap-5">
+    <section className="px-5 mx-auto font-hvm flex flex-col gap-5 w-padded">
       <div className="flex items-center justify-between">
-        <h2 className="text-[1.3rem] font-normal">Member Benifits</h2>
+        <h2 className="text-[1.3rem] font-normal">Member Benefits</h2>
         <menu className="flex gap-3 items-center">
           <button className="bg-[#F5F5F5] p-2 rounded-full hover:bg-stone-300 transition-colors duration-200">
             <svg

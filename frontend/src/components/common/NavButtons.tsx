@@ -1,4 +1,5 @@
-const NavButtons = () => {
+import { INavButtonsProps } from "../../interfaces_types/common/NavButtons.ts";
+const NavButtons = ({ prev, next }: INavButtonsProps) => {
   return (
     <div className="w-[99.3%] flex items-center justify-between mb-5">
       <h2 className="text-[1.3rem] font-normal">All New, Perfect For You</h2>
@@ -7,7 +8,10 @@ const NavButtons = () => {
           Shop
         </a>
         <div className="flex gap-3">
-          <button className="bg-[#F5F5F5] rounded-full p-2 hover:bg-stone-300 transition-colors duration-200 ">
+          <button
+            onClick={prev}
+            className="bg-[#F5F5F5] rounded-full p-2 hover:bg-stone-300 transition-colors duration-200 "
+          >
             <svg
               aria-hidden="true"
               focusable="false"
@@ -19,12 +23,15 @@ const NavButtons = () => {
             >
               <path
                 stroke="currentColor"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 d="M15.525 18.966L8.558 12l6.967-6.967"
               ></path>
             </svg>
           </button>
-          <button className="bg-[#F5F5F5] p-2 rounded-full hover:bg-stone-300 transition-colors duration-200 ">
+          <button
+            onClick={next}
+            className="bg-[#F5F5F5] p-2 rounded-full hover:bg-stone-300 transition-colors duration-200 "
+          >
             <svg
               aria-hidden="true"
               focusable="false"
@@ -36,7 +43,7 @@ const NavButtons = () => {
             >
               <path
                 stroke="currentColor"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 d="M8.474 18.966L15.44 12 8.474 5.033"
               ></path>
             </svg>
