@@ -1,5 +1,5 @@
 import HeaderContainer from "../../components/common/Header/HeaderContainer";
-import Footer from "../../components/common/Footer";
+import Footer from "../../components/common/Footer/Footer";
 import HeroContainer from "../../components/home/Hero/HeroContainer";
 import FeaturedSection from "../../components/home/FeaturedSection/Featured";
 import NewSection from "../../components/home/NewSection/NewSectionContainer";

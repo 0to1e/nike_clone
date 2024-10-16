@@ -13,7 +13,7 @@ import { AuthFormContext } from "../../contexts/AuthFormContext";
 import VisibilitySharpIcon from "@mui/icons-material/VisibilitySharp";
 import VisibilityOffSharpIcon from "@mui/icons-material/VisibilityOffSharp";
 
-const RegisterForm = forwardRef<IRegisterFormRef>((ref) => {
+const RegisterForm = forwardRef<IRegisterFormRef>((props, ref) => {
   const {
     register,
     handleSubmit,

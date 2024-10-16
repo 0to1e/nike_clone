@@ -10,7 +10,7 @@ import { validateEmailFormat } from "../../utils/authValidationUtils";
 import { ILoginFormData, ILoginFormRef } from "../../interfaces_types/Auth";
 import { AuthFormContext } from "../../contexts/AuthFormContext";
 
-const LoginForm = forwardRef<ILoginFormRef>((ref) => {
+const LoginForm = forwardRef<ILoginFormRef>((props,ref) => {
   const {
     register,
     handleSubmit,

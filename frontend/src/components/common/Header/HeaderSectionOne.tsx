@@ -22,7 +22,7 @@ const HeaderSectionOne = () => {
       </svg>
       <menu className="flex">
         {entries.map(([key, value], index) => (
-          <a key={key} className="text-xs font-hvm font-medium" href={value}>
+          <a key={key} className="text-xs font-hvm font-medium hover:text-[#7A7A7C]" href={value}>
             {key}
             {index < entries.length - 1 && <span className="px-3">|</span>}
           </a>

@@ -32,8 +32,8 @@ const HeaderSectionTwo = () => {
 
   return (
     <header
-      className={`flex justify-between items-center p-3 px-6 tb:px-10 gap-9 bg-white transition-transform duration-200 ease-in-out ${
-        isVisible ? "sticky top-0 z-10 " : "-translate-y-full"
+      className={`flex justify-between items-center p-3 px-6 tb:px-10 gap-9 bg-white transition-transform duration-100 ease-in-out sticky top-0 z-10 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="basis-1/4 shrink-2">
@@ -54,25 +54,25 @@ const HeaderSectionTwo = () => {
       >
         <ul className="flex gap-5 items-center font-hvm font-medium">
           <li className="border-b-2 border-transparent hover:border-black text-nowrap">
-            New & Featured
+            <a href="#">New & Featured</a>
           </li>
           <li className="border-b-2 border-transparent hover:border-black">
-            Men
+            <a href="#">Men</a>
           </li>
           <li className="border-b-2 border-transparent hover:border-black">
-            Women
+            <a href="#">Women</a>
           </li>
           <li className="border-b-2 border-transparent hover:border-black">
-            Kids
+            <a href="#">Kids</a>
           </li>
           <li className="border-b-2 border-transparent hover:border-black">
-            Sale
+            <a href="#">Sale</a>
           </li>
           <li className="border-b-2 border-transparent hover:border-black">
-            Customise
+            <a href="#">Customise</a>
           </li>
           <li className="border-b-2 border-transparent hover:border-black">
-            SNKRS
+            <a href="#">SNKRS</a>
           </li>
         </ul>
       </nav>
