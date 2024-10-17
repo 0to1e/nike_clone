@@ -79,7 +79,7 @@ const HeaderSectionTwo = () => {
 
       <div className="flex basis-1/4 justify-end">
         <menu>
-          <ul className="flex gap-1">
+          <ul className="flex gap-1 items-center transition-all">
             {Object.keys(sectionTwoNavigation)
               .filter(
                 (menu) =>
@@ -88,28 +88,70 @@ const HeaderSectionTwo = () => {
                     ? !sectionTwoNavigation[menu].onSmall
                     : sectionTwoNavigation[menu].onSmall)
               )
-              .map((menu) => (
-                <a
-                  className="hover:bg-slate-200 p-[0.4rem] rounded-full"
-                  key={menu}
-                  href={sectionTwoNavigation[menu].path}
-                >
-                  <svg
-                    width="24px"
-                    height="24px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="transition-colors duration-100 ease-in-out"
-                  >
-                    <title>{menu}</title>
-                    <path d={sectionTwoNavigation[menu].svgPath} />
-                  </svg>
-                </a>
-              ))}
+              .map((menu) => {
+                if (width >= 980 && menu === "Search") {
+                  return (
+                    <li>
+                      <div className="bg-[#F5F5F5] inline-flex items-center rounded-full gap-1">
+                        <a
+                          className="bg-[#F5F5F5] p-[0.4rem] rounded-full"
+                          key={menu}
+                          href={sectionTwoNavigation[menu].path}
+                        >
+                          <svg
+                            width="24px"
+                            height="24px"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="transition-colors duration-100 ease-in-out"
+                          >
+                            <title>{menu}</title>
+                            <path d={sectionTwoNavigation[menu].svgPath} />
+                          </svg>
+                        </a>
+                        <form action="">
+                          <input
+                            className="w-[9rem] bg-[#F5F5F5] rounded-full font-hvm placeholder-[#707072] font-medium"
+                            type="text"
+                            name="Search"
+                            id="serach"
+                            placeholder="Search"
+                          />
+                        </form>
+                      </div>
+                    </li>
+                  );
+                }
+                return (
+                  <li className="inline-flex">
+                    {" "}
+                    <a
+                      className="hover:bg-slate-200 p-[0.4rem] rounded-full"
+                      key={menu}
+                      href={sectionTwoNavigation[menu].path}
+                    >
+                      <svg
+                        width="24px"
+                        height="24px"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="transition-colors duration-100 ease-in-out"
+                      >
+                        <title>{menu}</title>
+                        <path d={sectionTwoNavigation[menu].svgPath} />
+                      </svg>
+                    </a>
+                  </li>
+                );
+              })}
           </ul>
         </menu>
       </div>

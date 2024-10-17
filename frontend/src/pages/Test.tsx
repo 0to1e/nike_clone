@@ -48,3 +48,4 @@ const ResizableComponent = () => {
 };
 
 export default ResizableComponent;
+

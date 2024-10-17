@@ -1,15 +1,9 @@
 import { FooterItemsList } from "./footerItems";
-const Footer: React.FC<{ className?: string }> = ({ className = "" }) => {
-  const capitalize = (text: string) => {
-    return text
-      .split(" ")
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ");
-  };
+import { capitalize } from "../../../utils/functions/capitalizeSentence";
+
+const Footer = () => {
   return (
-    <footer
-      className={`h-[70vh] w-full bg-white flex flex-col gap-12 px-12 z-10 ${className}`}
-    >
+    <footer className={"w-full bg-white flex flex-col gap-12 p-12 py-20 pb-24 z-10"}>
       <div className=" bg-[#F1F1F1] p-[0.05rem]"></div>
       <div className="flex justify-between font-hvm text-sm font-medium">
         <section className="flex flex-col gap-20">
@@ -31,7 +25,7 @@ const Footer: React.FC<{ className?: string }> = ({ className = "" }) => {
               </div>
             ))}
           </div>
-          <div className="flex justify-between text-[#7C7C7C]">
+          <div className="flex gap-8 text-[#7C7C7C]">
             <span className="text-black transition-colors duration-50 ease-in">
               © 2024 Nike, Inc. All rights reserved
             </span>
