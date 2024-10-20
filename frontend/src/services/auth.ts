@@ -1,7 +1,6 @@
 //frontend/src/Pages/Auth/actions.ts
 
 import axios from "axios";
-
 import { ILoginFormData, IRegisterFormData } from "../interfaces_types/Auth";
 
 export const handleLogin = async (data: ILoginFormData) => {

@@ -13,7 +13,7 @@ const ImageSlider = () => {
   return (
     <div
       className={`hidden mid:flex relative overflow-hidden z-10 basis-1/2 justify-center items-center transition-transform duration-300 ease-in-out ${
-        loginForm ? "translate-x-full" : "translate-x-0"
+        loginForm ? "translate-x-0" : "translate-x-full"
       }`}
     >
       <div
@@ -21,7 +21,7 @@ const ImageSlider = () => {
           loginForm ? "opacity-0" : "opacity-100"
         }`}
         style={{
-          backgroundImage: "url(./src/assets/authPage/register.jpg)",
+          backgroundImage: "url(./src/assets/authPage/login.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           display: "block",
@@ -32,7 +32,7 @@ const ImageSlider = () => {
           loginForm ? "opacity-100" : "opacity-0"
         }`}
         style={{
-          backgroundImage: "url(./src/assets/authPage/login.jpg)",
+          backgroundImage: "url(./src/assets/authPage/register.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           display: "block",

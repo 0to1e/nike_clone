@@ -60,7 +60,7 @@ const RegisterForm = forwardRef<IRegisterFormRef>((props, ref) => {
     <form
       onSubmit={handleSubmit(handleRegisterSubmit)}
       className={`w-full px-[5vw] flex flex-col justify-center ${
-        loginForm ? "block" : "hidden"
+        loginForm?.loginForm ? "hidden" : "block"
       }`}
     >
       <p className="w-full font-bold text-2xl mb-14 text-center">

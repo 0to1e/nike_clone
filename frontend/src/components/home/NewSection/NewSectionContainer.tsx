@@ -1,23 +1,12 @@
 import { newItems } from "../NewSection/NewSectionData";
 import { FeaturedItemsList } from "../../../interfaces_types/Home/featuredSection";
 import NavButtons from "../../common/NavButtons";
-import { useRef, useEffect } from "react";
 
 const NewSection: React.FC<FeaturedItemsList> = () => {
-  const wrapperRef = useRef<HTMLElement>();
-  useEffect(() => {
-    const wrapper = document.getElementById("id") as HTMLElement;
-
-    if (wrapper) wrapperRef.current = wrapper as HTMLElement;
-  }, []);
-
   return (
     <section className=" my-32 w-padded mx-auto font-hvm flex flex-col">
       <NavButtons prev={() => {}} next={() => {}} />
-      <div
-        id="id"
-        className="flex gap-2.5 overflow-hidden overflow-x-auto scroll-smooth"
-      >
+      <div className="flex gap-2.5 overflow-hidden overflow-x-auto scroll-smooth">
         {Object.keys(newItems).map((item) => (
           <a
             href={newItems[item].path}

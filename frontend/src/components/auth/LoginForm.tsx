@@ -10,7 +10,7 @@ import { validateEmailFormat } from "../../utils/authValidationUtils";
 import { ILoginFormData, ILoginFormRef } from "../../interfaces_types/Auth";
 import { AuthFormContext } from "../../contexts/AuthFormContext";
 
-const LoginForm = forwardRef<ILoginFormRef>((props,ref) => {
+const LoginForm = forwardRef<ILoginFormRef>((props, ref) => {
   const {
     register,
     handleSubmit,
@@ -59,7 +59,7 @@ const LoginForm = forwardRef<ILoginFormRef>((props,ref) => {
     <form
       onSubmit={handleSubmit(handleLoginSubmit)}
       className={`w-full px-[5vw] flex flex-col ${
-        loginForm ? "hidden" : "block"
+        loginForm?.loginForm ? "block" : "hidden"
       }`}
     >
       <p className="w-full font-bold text-2xl mb-14 text-center transition-all duration-300">

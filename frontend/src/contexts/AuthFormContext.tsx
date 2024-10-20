@@ -15,7 +15,7 @@ export const AuthFormContext = createContext<IAuthContextType | null>(null);
 export const AuthFormContextProvider: React.FC<IAuthContextProviderProps> = ({
   children,
 }) => {
-  const [loginForm, switchForms] = useBoolean(false);
+  const [loginForm, switchForms] = useBoolean(true);
 
   return (
     <AuthFormContext.Provider value={{ loginForm, switchForms }}>
