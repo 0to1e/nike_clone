@@ -7,8 +7,16 @@ import logger from "./utils/logger.js";
 import cookieParser from "cookie-parser";
 
 export const app = express();
-
-app.use(cors());
+const corsOptions = {
+  origin: [`http://localhost${process.env.FRONTPORT}`],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+  // exposedHeaders: ['Custom-Header'], // Exposed headers
+  credentials: true, // Whether to allow credentials (cookies, authorization headers)
+  // maxAge: 3600, // Maximum age of the preflight request cache
+};
+  
+app.use(corsOptions);
 app.use(express.json());
 app.use(cookieParser());
 app.use(

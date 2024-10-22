@@ -7,7 +7,7 @@ mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => {
     app.listen(process.env.PORT, () => {
-      logger.info(`Listening on PORT ${process.env.PORT}`);
+      logger.info(`Listening on PORT ${process.env.BACKPORT}`);
     });
   })
   .catch((err) => logger.error("MongoDB connection error:", err));

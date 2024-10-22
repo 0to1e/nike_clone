@@ -3,7 +3,7 @@ const NewArrival = () => {
     <a className="w-full flex flex-col items-center font-hvm py-10 gap-1 cursor-pointer">
       <span className="font-semibold">New Arrival</span>
       <span className="font-extrabold text-7xl">P-6000</span>
-      <span>
+      <span className="text-center px-8 md:px-0">
         Remastered for style, elevate your everyday look with the
         Pegasus-inspired legacy runner
       </span>

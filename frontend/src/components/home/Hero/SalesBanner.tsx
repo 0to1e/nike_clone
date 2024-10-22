@@ -17,7 +17,7 @@ const SalesBanner = () => {
     <>
       <section className="bg-[#F5F5F5] flex overflow-hidden p-1">
         <div
-          className={`flex flex-col flex-shrink-0 w-full  justify-center items-center transition-transform duration-500 ease-in-out ${
+          className={`flex flex-col flex-shrink-0 w-full justify-center items-center transition-transform duration-500 ease-in-out ${
             banner ? "-translate-x-[100%]" : "translate-x-0"
           }`}
         >

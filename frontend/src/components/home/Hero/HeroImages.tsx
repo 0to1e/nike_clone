@@ -1,7 +1,7 @@
 const HeroImages = () => {
   return (
     <div className="w-padded mx-auto">
-      <figure className="hidden mob:flex flex-col">
+      <figure className="hidden flex-col mob:flex ">
         <img
           src="./src/assets/Home/hero/hero-lg.jpg"
           width={2880}

@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { ResponsiveHeaderContext } from "../../contexts/ResponsiveHeaderContext";
+
 import HeaderContainer from "../../components/common/Header/HeaderContainer";
 import Footer from "../../components/common/Footer/Footer";
 import HeroContainer from "../../components/home/Hero/HeroContainer";
@@ -9,8 +12,15 @@ import MemberBenifitSection from "../../components/home/MemberBenifitSection/Mem
 import CategoriesSection from "../../components/home/CategoriesSection/CategoriesSection";
 
 const HomePage = () => {
+  const responsiveHeaderContext = useContext(ResponsiveHeaderContext);
+  const isResponsiveHeaderActive =
+    responsiveHeaderContext?.isResponsiveHeaderActive;
   return (
-    <>
+    <div
+      className={`${
+        isResponsiveHeaderActive ? "max-h-screen overflow-hidden" : ""
+      }`}
+    >
       <HeaderContainer />
       <HeroContainer />
       <FeaturedSection />
@@ -20,7 +30,7 @@ const HomePage = () => {
       <MemberBenifitSection />
       <CategoriesSection />
       <Footer />
-    </>
+    </div>
   );
 };
 

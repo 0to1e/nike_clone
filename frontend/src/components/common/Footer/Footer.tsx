@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
           <div className="flex gap-8 text-[#7C7C7C]">
             <span className="text-black transition-colors duration-50 ease-in">
-              © 2024 Nike, Inc. All rights reserved
+              © Rohan's web gimps, {new Date().getFullYear()}
             </span>
             <span className="hover:text-black transition-colors duration-50 ease-in">
               Guides

@@ -17,7 +17,7 @@ export default {
         lp: "1145px", // large devices
       },
       width: {
-        padded:"var(--padded-width)", // Custom width for mobile
+        padded: "var(--padded-width)", // Custom width for mobile
       },
     },
     fontFamily: {},
