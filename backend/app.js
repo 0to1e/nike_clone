@@ -16,7 +16,7 @@ const corsOptions = {
   // maxAge: 3600, // Maximum age of the preflight request cache
 };
   
-app.use(corsOptions);
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
 app.use(

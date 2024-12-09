@@ -28,6 +28,7 @@ router.post("/login",
   loginValidationRules, // Validation middleware
   handleValidationResult, // Handle validation errors
   handleUserLogin);
+  
 router.post("/checkUnique", checkExistingUserCredentials);
 router.get("/allUsers", restrictToLoggedInUserOnly, listAllUsers);
 

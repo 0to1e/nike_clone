@@ -6,16 +6,12 @@ interface IResponsiveHeaderContext {
   toggleResponsiveHeader: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-interface IContextProviderProps {
-  children: ReactNode;
-}
-
 export const ResponsiveHeaderContext =
   createContext<IResponsiveHeaderContext | null>(null);
 
-export const ResponsiveHeaderContextProvider: React.FC<
-  IContextProviderProps
-> = ({ children }) => {
+export const ResponsiveHeaderContextProvider: React.FC<{
+  children: ReactNode;
+}> = ({ children }) => {
   const [isResponsiveHeaderActive, toggleResponsiveHeader] = useState(false);
   return (
     <ResponsiveHeaderContext.Provider

@@ -2,7 +2,7 @@ import { useRef, useContext } from "react";
 import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
 import { AuthFormContext } from "../../contexts/AuthFormContext";
-import { ILoginFormRef, IRegisterFormRef } from "../../interfaces_types/Auth";
+import { ILoginFormRef, IRegisterFormRef } from "../../interfaces_types/auth/Auth";
 
 const FormsContainer = () => {
   const formContext = useContext(AuthFormContext);

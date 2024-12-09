@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ResponsiveHeaderContext } from "../../contexts/ResponsiveHeaderContext";
 
-import HeaderContainer from "../../components/common/Header/HeaderContainer";
+import HeaderContainer from "../../components/common/Header/Header";
 import Footer from "../../components/common/Footer/Footer";
 import HeroContainer from "../../components/home/Hero/HeroContainer";
 import FeaturedSection from "../../components/home/FeaturedSection/Featured";

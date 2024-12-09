@@ -1,4 +1,4 @@
-import { sectionOneNavigation } from "./headerItems";
+import { sectionOneNavigation } from "../../headerItems";
 
 const HeaderSectionOne = () => {
   const entries = Object.entries(sectionOneNavigation);

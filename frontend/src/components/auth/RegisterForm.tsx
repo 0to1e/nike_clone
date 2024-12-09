@@ -2,7 +2,7 @@ import { forwardRef, useContext, useImperativeHandle, useState } from "react";
 import {
   IRegisterFormData,
   IRegisterFormRef,
-} from "../../interfaces_types/Auth";
+} from "../../interfaces_types/auth/Auth";
 import { useForm } from "react-hook-form";
 
 import { checkExistingUser, handleSignup } from "../../services/auth";
