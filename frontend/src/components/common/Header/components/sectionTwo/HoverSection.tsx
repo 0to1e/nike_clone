@@ -7,7 +7,7 @@ export const HoverSection: React.FC<{
   setOnNavigationHover: React.Dispatch<React.SetStateAction<string>>;
 }> = ({ onNavigationHover, setOnNavigationHover }) => {
   
-    function hideHeader(e) {
+    function hideHeader(e:any) {
     if (e.relatedTarget.tagName === "SECTION") setOnNavigationHover("");
   }
 

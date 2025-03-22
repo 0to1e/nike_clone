@@ -7,7 +7,10 @@ import VisibilityOffSharpIcon from "@mui/icons-material/VisibilityOffSharp";
 import { handleLogin } from "../../services/auth";
 import { useBoolean } from "../../hooks/useBooleanHook";
 import { validateEmailFormat } from "../../utils/authValidationUtils";
-import { ILoginFormData, ILoginFormRef } from "../../interfaces_types/auth/Auth";
+import {
+  ILoginFormData,
+  ILoginFormRef,
+} from "../../interfaces_types/auth/Auth";
 import { AuthFormContext } from "../../contexts/AuthFormContext";
 
 const LoginForm = forwardRef<ILoginFormRef>((props, ref) => {
@@ -20,7 +23,7 @@ const LoginForm = forwardRef<ILoginFormRef>((props, ref) => {
   } = useForm<ILoginFormData>();
 
   const loginForm = useContext(AuthFormContext);
-
+  console.log(props);
   const [loginConflicts, setLoginConflicts] = useState({
     incorrectPassword: false,
     userNotFound: false,

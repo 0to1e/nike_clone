@@ -3,7 +3,7 @@ const HeroImages = () => {
     <div className="w-padded mx-auto">
       <figure className="hidden flex-col mob:flex ">
         <img
-          src="./src/assets/Home/hero/hero-lg.jpg"
+          src="/assets/Home/hero/hero-lg.jpg"
           width={2880}
           height={1402}
         />
@@ -11,7 +11,7 @@ const HeroImages = () => {
       </figure>
       <figure className="flex mob:hidden">
         <img
-          src="./src/assets/Home/hero/hero-sm.jpg"
+          src="/assets/Home/hero/hero-sm.jpg"
           width={414}
           height={500}
         />

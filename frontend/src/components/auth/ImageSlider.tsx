@@ -21,7 +21,7 @@ const ImageSlider = () => {
           loginForm ? "opacity-0" : "opacity-100"
         }`}
         style={{
-          backgroundImage: "url(./src/assets/authPage/login.jpg)",
+          backgroundImage: "url(/assets/authPage/login.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           display: "block",
@@ -32,7 +32,7 @@ const ImageSlider = () => {
           loginForm ? "opacity-100" : "opacity-0"
         }`}
         style={{
-          backgroundImage: "url(./src/assets/authPage/register.jpg)",
+          backgroundImage: "url(/assets/authPage/register.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           display: "block",

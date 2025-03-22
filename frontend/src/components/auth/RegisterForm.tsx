@@ -23,7 +23,7 @@ const RegisterForm = forwardRef<IRegisterFormRef>((props, ref) => {
   } = useForm<IRegisterFormData>();
 
   const loginForm = useContext(AuthFormContext);
-
+  console.log(props);
   const [registrationconflicts, setRegistrationConflicts] = useState({
     emailTaken: false,
     user_nameTaken: false,

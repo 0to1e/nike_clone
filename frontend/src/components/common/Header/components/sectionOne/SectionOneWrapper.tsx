@@ -1,7 +1,10 @@
+import { useContext } from "react";
+import { AuthFormContext } from "../../../../../contexts/AuthFormContext";
 import { sectionOneNavigation } from "../../headerItems";
 
 const HeaderSectionOne = () => {
   const entries = Object.entries(sectionOneNavigation);
+  const formContext = useContext(AuthFormContext);
   return (
     <header className="hidden lp:flex w-full bg-[#F5F5F5] justify-between items-center p-[0.4rem] px-11">
       <svg
@@ -23,6 +26,11 @@ const HeaderSectionOne = () => {
       <menu className="flex">
         {entries.map(([key, value], index) => (
           <a
+            onClick={() => {
+              if (key === "Register") {
+                formContext?.switchForms();
+              }
+            }}
             key={key}
             className="text-xs font-hvm font-medium hover:text-[#7A7A7C]"
             href={value}

@@ -7,8 +7,8 @@ import {
 export const sectionOneNavigation: IsectionOneList = {
   "Find a store": "#",
   Help: "#",
-  Login: "#",
-  "Sign Up": "#",
+  Login: "/auth",
+  "Sign Up": "/auth",
 };
 
 export const sectionTwoMenu: IsectionTwoMenuList = {
